@@ -1,0 +1,53 @@
+.people-section {
+  color: white;
+}
+
+.people-section__search {
+  margin-left: 36%;
+  justify-content: center;
+  max-width: 350px;
+  margin-top: 30px;
+  margin-bottom: 20px;
+  padding: 20px;
+}
+
+.people-section__search--title {
+  font-family: starwars;
+}
+
+.people-section__search--input {
+  text-align: center;
+  padding: 5px;
+  font-weight: bold;
+  border: none;
+  background-color: darkgrey;
+  border-radius: 5px;
+}
+
+.people-section__card {
+  border: 1px solid #ffffff;
+  padding: 15px;
+  max-width: 500px;
+  margin-bottom: 10px;
+  margin-left: 29%;
+}
+
+.people-section__move-box {
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+}
+
+.people-section__move-button {
+  border: none;
+  background-color: transparent;
+  font-weight: bolder;
+  font-size: 40px;
+  color: #ffffff;
+  margin-bottom: 20px;
+
+  &:hover {
+    cursor: pointer;
+    color: #a4a3a3;
+  }
+}
