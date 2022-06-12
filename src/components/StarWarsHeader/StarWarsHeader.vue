@@ -10,6 +10,8 @@
             <nav class="header__navigation--link center-md">
               <router-link to="/">HOME</router-link>
               <router-link to="/people">PEOPLE</router-link>
+              <router-link to="/films">FILMS</router-link>
+              <router-link to="/planets">PLANETS</router-link>
             </nav>
           </div>
         </div>

@@ -13,10 +13,10 @@ export const useSearchedPeopleStore = defineStore({
     },
   },
   actions: {
-    async fetchPeople(txt: number) {
+    async fetchPeople(page: number | string) {
       try {
         const peopleData = await axios.get(
-          `https://swapi.dev/api/people/${txt}`
+          `https://swapi.dev/api/people/${page}`
         );
         this.people = peopleData.data.results;
       } catch (error) {

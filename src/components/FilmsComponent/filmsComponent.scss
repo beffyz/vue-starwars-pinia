@@ -1,0 +1,20 @@
+.film-section {
+  color: #ffffff;
+}
+
+.film-section__card {
+  display: flex;
+  border: 1px solid #ffffff;
+  padding: 15px;
+  margin-top: 20px;
+  border-radius: 5px;
+}
+
+.film-section__card--details {
+  min-width: 30%;
+}
+
+.film-section__card--span {
+  color: #7c7b7b;
+  font-family: starwars;
+}

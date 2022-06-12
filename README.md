@@ -1,24 +1,17 @@
-# vue-pinia-compositions
-
-## Project setup
+# #vue-starwars-pinia
+```
+Star wars web application with possability for search characters, see all movies and
+filter them by id and release date. Also you can explore planets visualized from API data.
+```
+## #To run the app, type in console following commands...
 ```
 npm install
-```
-
-### Compiles and hot-reloads for development
-```
+npm i pinia
+npm i axios
 npm run serve
 ```
+### #App Preview
 
-### Compiles and minifies for production
-```
-npm run build
-```
+![](./src/assets/images/gif.gif)
 
-### Lints and fixes files
-```
-npm run lint
-```
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).

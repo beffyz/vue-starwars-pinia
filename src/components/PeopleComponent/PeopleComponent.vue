@@ -23,12 +23,16 @@
           <div class="people-section__move-box">
             <button
               class="people-section__move-button"
-              :disabled="this.txt === 1"
-              @click="this.txt--"
+              :disabled="this.page === 1"
+              @click="this.page--"
             >
               {{ "<" }}
             </button>
-            <button class="people-section__move-button" @click="this.txt++">
+            <button
+              class="people-section__move-button"
+              :disabled="this.page === 9"
+              @click="this.page++"
+            >
               {{ ">" }}
             </button>
           </div>
@@ -38,7 +42,7 @@
   </section>
 </template>
 
-<script>
+<script lang="ts">
 import { useSearchedPeopleStore } from "@/store/SearchedPeople";
 import { defineComponent } from "vue";
 import { mapState } from "pinia";
@@ -46,23 +50,23 @@ import { mapState } from "pinia";
 export default defineComponent({
   name: "PeopleComponent",
   data: () => ({
-    txt: 1,
+    page: 1,
     inputValue: "",
   }),
   created() {
-    useSearchedPeopleStore().fetchPeople(`?page=${this.txt}`);
+    useSearchedPeopleStore().fetchPeople(`?page=${this.page}`);
   },
   methods: {
-    searchPersonByName(name) {
+    searchPersonByName(name: string) {
       useSearchedPeopleStore().fetchPeople(`?search=${name}`);
     },
   },
   computed: {
-    ...mapState(useSearchedPeopleStore, ["getPeople", "getPageDetails"]),
+    ...mapState(useSearchedPeopleStore, ["getPeople"]),
   },
   watch: {
-    txt() {
-      useSearchedPeopleStore().fetchPeople(`?page=${this.txt}`);
+    page() {
+      useSearchedPeopleStore().fetchPeople(`?page=${this.page}`);
     },
   },
 });
